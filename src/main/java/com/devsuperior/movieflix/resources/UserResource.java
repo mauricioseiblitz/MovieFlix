@@ -25,15 +25,14 @@ public class UserResource {
 		return ResponseEntity.ok().body(list);
 	}
 	
-	/*
+	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<UserDTO> findById(@PathVariable Long id) {
 		UserDTO dto = service.findById(id);
 		return ResponseEntity.ok().body(dto);
 	}
-	*/
 	
-	@GetMapping(value = "/{profile}")
+	@GetMapping(value = "/profile")
 	public ResponseEntity<UserDTO> getCurrentUser() {
 		UserDTO currentUser = service.getCurrentUser();
 		return ResponseEntity.ok().body(currentUser);
